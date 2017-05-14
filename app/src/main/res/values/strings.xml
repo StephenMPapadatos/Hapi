@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Hapi</string>
+    <string name="title_activity_emotion_log">EmotionLogActivity</string>
 </resources>

@@ -1,10 +1,12 @@
-package com.example.steve.hapi;
+package com.example.steve.hapi.ChooseEmotion;
 
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+
+import com.example.steve.hapi.R;
 
 /**
  * Created by steve on 2017-05-14.
@@ -15,9 +17,9 @@ public class EmotionAdapter extends BaseAdapter {
     private Context mContext;
 
     public static Integer[] mThumbIds = {
-            R.drawable.angry, R.drawable.bored,
-            R.drawable.crying, R.drawable.happy,
-            R.drawable.in_love, R.drawable.unhappy
+            R.drawable.happy, R.drawable.unhappy,
+            R.drawable.angry, R.drawable.surprised,
+            R.drawable.in_love, R.drawable.bored
     };
 
     public EmotionAdapter(Context c) {

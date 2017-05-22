@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Hapi</string>
     <string name="title_activity_emotion_log">EmotionLogActivity</string>
+    <string name="title_activity_choose_emotion">ChooseEmotionActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

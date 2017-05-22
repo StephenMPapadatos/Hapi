@@ -1,4 +1,4 @@
-package com.example.steve.hapi;
+package com.example.steve.hapi.Types;
 
 import io.realm.RealmObject;
 
@@ -8,14 +8,20 @@ import io.realm.RealmObject;
 
 public class RealmEmotion extends RealmObject {
     private String emotion;
+    private String date;
 
     public RealmEmotion(){}
 
-    public RealmEmotion(String e){
-        emotion = e;
+    public RealmEmotion(Emotion e){
+        emotion = e.getName();
+        date = e.getDate();
     }
 
     public String getEmotion(){
         return emotion;
+    }
+
+    public String getDate(){
+        return date;
     }
 }

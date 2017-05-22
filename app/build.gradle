@@ -7,7 +7,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.example.steve.hapi"
-        minSdkVersion 16
+        minSdkVersion 18
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -27,9 +27,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
     compile 'com.jakewharton:butterknife:8.5.1'
     compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.google.android.gms:play-services-maps:10.2.6'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

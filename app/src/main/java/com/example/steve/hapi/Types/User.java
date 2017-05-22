@@ -1,4 +1,6 @@
-package com.example.steve.hapi;
+package com.example.steve.hapi.Types;
+
+import com.example.steve.hapi.Types.RealmEmotion;
 
 import java.util.List;
 import io.realm.RealmList;

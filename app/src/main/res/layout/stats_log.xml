@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/choose_emotion_gridview_padding">
+
+    <com.example.steve.hapi.Utilities.CustomTypefaceTextView
+        android:id="@+id/range"
+        app:layout_widthPercent="50%"
+        android:layout_height="match_parent"
+        android:text="range"
+        android:gravity="center"
+        app:customFont="@string/font_bold"/>
+
+    <com.example.steve.hapi.Utilities.CustomTypefaceTextView
+        android:id="@+id/amount"
+        app:layout_widthPercent="50%"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/range"
+        android:gravity="center"
+        android:text="amount"
+        app:customFont="@string/font_bold"/>
+
+</android.support.percent.PercentRelativeLayout>

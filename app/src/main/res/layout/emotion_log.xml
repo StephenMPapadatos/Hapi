@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/emotion_log_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerHorizontal="true">
 
-    <TextView
-        android:id="@+id/emotion"
+    <ImageView
+        android:id="@+id/imageview_emotion"
+        android:layout_width="@dimen/emotion_log_height"
+        android:layout_height="60dp"
+        android:src="@drawable/angry"
+        android:padding="16dp"/>
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="emotion"
-        android:gravity="start"/>
+        android:layout_toRightOf="@+id/imageview_emotion"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="end"
-        android:text="date" />
+        <com.example.steve.hapi.Utilities.CustomTypefaceTextView
+            android:id="@+id/emotion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="emotion"
+            android:gravity="start"
+            app:customFont="@string/font_regular"/>
 
-</LinearLayout>
+        <com.example.steve.hapi.Utilities.CustomTypefaceTextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            app:customFont="@string/font_regular"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

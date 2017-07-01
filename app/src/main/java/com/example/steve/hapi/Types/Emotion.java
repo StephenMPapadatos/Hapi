@@ -12,31 +12,41 @@ public class Emotion {
     private String mEmotionNote;
     private Location mEmotionLocation;
 
-    public Emotion(String name){
+    public Emotion(String name) {
         this(name, null, null, null);
     }
 
-    public Emotion(String name, String date){
+    public Emotion(String name, String date) {
         this(name, date, null, null);
 
     }
 
-    public Emotion(String name, String date, Location location){
-        this(name, date, location, null);
+    public Emotion(String name, String date, String note) {
+        this(name, date, note, null);
     }
 
-    public Emotion(String name, String date, Location location, String note){
+    public Emotion(String name, String date, String note,  Location location) {
         mEmotionName = name;
         mEmotionDate = date;
         mEmotionLocation = location;
         mEmotionNote = note;
     }
 
-    public String getName(){
+    public Emotion(RealmEmotion e){
+        mEmotionName = e.getEmotion();
+        mEmotionDate = e.getDate();
+        Location location = new Location("Dummy");
+        location.setLatitude(e.getLatitude());
+        location.setLongitude(e.getLongitude());
+        mEmotionLocation = location;
+        mEmotionNote = e.getNote();
+    }
+
+    public String getName() {
         return mEmotionName;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.mEmotionName = name;
     }
 
@@ -44,7 +54,7 @@ public class Emotion {
         return mEmotionDate;
     }
 
-    public void setDate(String date){
+    public void setDate(String date) {
         this.mEmotionDate = date;
     }
 

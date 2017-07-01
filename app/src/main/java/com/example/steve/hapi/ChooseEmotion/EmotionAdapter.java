@@ -1,12 +1,13 @@
 package com.example.steve.hapi.ChooseEmotion;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
-import com.example.steve.hapi.R;
+import static com.example.steve.hapi.Utilities.EmotionImages.thumbIds;
 
 /**
  * Created by steve on 2017-05-14.
@@ -16,19 +17,13 @@ public class EmotionAdapter extends BaseAdapter {
 
     private Context mContext;
 
-    public static Integer[] mThumbIds = {
-            R.drawable.happy, R.drawable.unhappy,
-            R.drawable.angry, R.drawable.surprised,
-            R.drawable.in_love, R.drawable.bored
-    };
-
     public EmotionAdapter(Context c) {
         mContext = c;
     }
 
     @Override
     public int getCount() {
-        return mThumbIds.length;
+        return thumbIds.length;
     }
 
     @Override
@@ -47,13 +42,13 @@ public class EmotionAdapter extends BaseAdapter {
         if (convertView == null) {
             // if it's not recycled, initialize some attributes
             imageView = new ImageView(mContext);
-            imageView.setPadding(8, 8, 8, 8);
+            imageView.setPadding(16, 16, 16, 16);
             imageView.setAdjustViewBounds(true);
         } else {
             imageView = (ImageView) convertView;
         }
 
-        imageView.setImageResource(mThumbIds[position]);
+        imageView.setImageDrawable(ContextCompat.getDrawable(mContext, thumbIds[position]));
         return imageView;
     }
 }

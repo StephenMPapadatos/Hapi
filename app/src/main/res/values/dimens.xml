@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="choose_emotion_gridview_padding">48dp</dimen>
+    <dimen name="status_fragment_basic_all_margin">16dp</dimen>
+    <dimen name="choose_emotion_title_text_size">24sp</dimen>
+
+    <!-- Emotion Log -->
+    <dimen name="emotion_log_height">60dp</dimen>
+</resources>

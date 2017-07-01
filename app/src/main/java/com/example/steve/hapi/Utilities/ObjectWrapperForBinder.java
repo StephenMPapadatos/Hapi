@@ -1,4 +1,4 @@
-package com.example.steve.hapi;
+package com.example.steve.hapi.Utilities;
 
 import android.os.Binder;
 

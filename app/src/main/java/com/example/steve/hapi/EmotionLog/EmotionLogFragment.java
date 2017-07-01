@@ -1,20 +1,24 @@
 package com.example.steve.hapi.EmotionLog;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.steve.hapi.ChooseEmotion.ChooseEmotionFragment;
 import com.example.steve.hapi.Controllers.UserController;
+import com.example.steve.hapi.Utilities.ObjectWrapperForBinder;
 import com.example.steve.hapi.R;
 import com.example.steve.hapi.Types.Emotion;
+
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnItemClick;
 import io.realm.Realm;
 
 public class EmotionLogFragment extends Fragment {
@@ -22,7 +26,9 @@ public class EmotionLogFragment extends Fragment {
     @BindView(R.id.listview)
     protected ListView mListView;
 
-    EmotionLogAdapter<Emotion> mAdapter;
+    private EmotionLogAdapter<Emotion> mAdapter;
+
+    private List<Emotion> mEmotions;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,8 +37,8 @@ public class EmotionLogFragment extends Fragment {
         ButterKnife.bind(this, view);
         Realm.init(getContext());
 
-        List<Emotion> emotions = UserController.getEmotions();
-        mAdapter = new EmotionLogAdapter<>(getContext(), emotions);
+        mEmotions = UserController.getEmotions();
+        mAdapter = new EmotionLogAdapter<>(getContext(), mEmotions);
 
         mListView.setAdapter(mAdapter);
 
@@ -53,6 +59,14 @@ public class EmotionLogFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @OnItemClick(R.id.listview)
+    public void clickEmotionRecord(AdapterView<?> parent, int position) {
+        final Intent intent = new Intent(getContext(), ViewEmotionCardActivity.class);
+        final Bundle bundle = new Bundle();
+        bundle.putBinder("Emotion", new ObjectWrapperForBinder(mEmotions.get(position)));
+        startActivity(intent.putExtras(bundle));
     }
 
 }

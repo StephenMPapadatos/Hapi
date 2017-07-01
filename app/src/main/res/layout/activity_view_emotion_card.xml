@@ -24,36 +24,25 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.45" />
 
-    <EditText
+    <TextView
         android:id="@+id/emotion_note"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
         android:ems="10"
-        android:gravity="bottom|start"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/button_submit"
+        android:gravity="start"
+        app:layout_constraintBottom_toTopOf="@+id/button_confirm"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <Button
-        android:id="@+id/button_cancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Cancel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:id="@+id/button_submit"
+        android:id="@+id/button_confirm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:layout_margin="16dp"
-        android:text="Submit"
+        android:text="OK"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/button_cancel"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 </android.support.constraint.ConstraintLayout>

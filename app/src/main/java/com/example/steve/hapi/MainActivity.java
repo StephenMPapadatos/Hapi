@@ -8,7 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 
 import com.example.steve.hapi.ChooseEmotion.ChooseEmotionFragment;
-import com.example.steve.hapi.ChooseEmotion.StatusFragment;
+import com.example.steve.hapi.StatsAndSettings.StatsFragment;
 import com.example.steve.hapi.EmotionLog.EmotionLogFragment;
 
 import butterknife.BindView;
@@ -53,7 +53,7 @@ public class MainActivity extends FragmentActivity {
         public Fragment getItem(int position) {
             switch (MainActivity.HapiFragmentName.values()[position]) {
                 case STATUS:
-                    return StatusFragment.newInstance();
+                    return StatsFragment.newInstance();
                 case CHOOSE:
                     return ChooseEmotionFragment.newInstance();
                 case LOG:

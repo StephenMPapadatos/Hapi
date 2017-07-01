@@ -7,6 +7,8 @@ import com.example.steve.hapi.Types.RealmEmotion;
 import com.example.steve.hapi.Types.User;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
@@ -145,6 +147,7 @@ public class UserController {
                 emotions.add(new Emotion(e));
             }
         }
+
         realm.close();
         return emotions;
     }

@@ -9,9 +9,12 @@ import com.example.steve.hapi.R;
 public class EmotionImages {
 
     public static Integer[] thumbIds = {
-            R.drawable.happy, R.drawable.sad,
-            R.drawable.angry, R.drawable.excited,
-            R.drawable.scared, R.drawable.chillin
+            R.drawable.happy,
+            R.drawable.sad,
+            R.drawable.angry,
+            R.drawable.excited,
+            R.drawable.scared,
+            R.drawable.chillin
     };
 
 }

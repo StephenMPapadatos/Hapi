@@ -4,7 +4,7 @@ apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion "25.0.3"
     defaultConfig {
         applicationId "com.example.steve.hapi"
         minSdkVersion 19
@@ -20,6 +20,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    sourceSets {
+        main.res.srcDirs += 'src/main/res-main'
+        main.res.srcDirs += 'src/main/res-boommenu'
+        main.res.srcDirs += 'src/main/res-materialspinner'
     }
 }
 

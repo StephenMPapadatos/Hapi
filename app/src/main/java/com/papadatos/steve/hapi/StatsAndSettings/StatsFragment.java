@@ -118,7 +118,7 @@ public class StatsFragment extends Fragment {
         Date start = UserController.getStart();
         Date end = UserController.getEnd();
         int amount = UserController.getAmount();
-        if (start != null && end != null && amount != 0 && (mStart != start && mEnd != end)) {
+        if (start != null && end != null && amount != 0 && (!start.equals(mStart) && !end.equals(mEnd))) {
             NotificationScheduler.scheduleNotification(getContext(), "what's up?", start, end, amount);
         }
     }

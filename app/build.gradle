@@ -17,8 +17,8 @@ android {
         applicationId "com.papadatos.steve.hapi"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName '1.0.2'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         resValue "string", "google_maps_key", (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
@@ -34,6 +34,8 @@ android {
         main.res.srcDirs += 'src/main/res-main'
         main.res.srcDirs += 'src/main/res-boommenu'
         main.res.srcDirs += 'src/main/res-materialspinner'
+    }
+    productFlavors {
     }
 }
 

@@ -12,7 +12,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         app:srcCompat="@drawable/happy"
-        android:padding="16dp"/>
+        android:padding="12dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,14 +20,14 @@
         android:gravity="center_vertical"
         android:orientation="vertical">
 
-        <com.example.steve.hapi.Utilities.CustomTypefaceTextView
+        <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
             android:id="@+id/emotion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="happy"
             app:customFont="@string/font_bold" />
 
-        <com.example.steve.hapi.Utilities.CustomTypefaceTextView
+        <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
             android:id="@+id/date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,115 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.steve.hapi.EmotionLog.EmotionLogFragment">
-
-    <com.example.steve.hapi.Utilities.CustomTypefaceTextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/emotion_log_height"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="MAP   SETTINGS"
-        android:textSize="40sp"
-        app:customFont="@string/font_bold" />
+    android:id="@+id/container"
+    android:background="@color/colorPrimary">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/title"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/emotion_log_shape">
+        tools:context="com.papadatos.steve.hapi.EmotionLog.EmotionLogFragment">
+
+            <RelativeLayout
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="16dp">
+
+                <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="top"
+                    android:text="hapi"
+                    android:textSize="50sp"
+                    app:customFont="@string/font_bold" />
+
+                <ImageView
+                    android:id="@+id/settings"
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:scaleType="centerInside"
+                    android:tint="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_settings_black_24dp" />
+
+            </RelativeLayout>
+
+
+
 
         <RelativeLayout
-            android:id="@+id/controller"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"
-            android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/emotion_log_shape">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:id="@+id/controller"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
                 android:orientation="horizontal">
 
-                <com.example.steve.hapi.Utilities.MaterialSpinner.materialspinner.MaterialSpinner
-                    android:id="@+id/spinner_emotions"
-                    android:layout_width="0dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:ms_background_color="@color/colorAccent"
-                    app:ms_dropdown_height="wrap_content"
-                    app:ms_dropdown_max_height="350dp" />
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
 
-                <com.example.steve.hapi.Utilities.MaterialSpinner.materialspinner.MaterialSpinner
-                    android:id="@+id/spinner_ranges"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:ms_background_color="@color/colorAccent"
-                    app:ms_dropdown_height="wrap_content"
-                    app:ms_dropdown_max_height="350dp" />
+                    <com.papadatos.steve.hapi.Utilities.MaterialSpinner.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_emotions"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        app:customFont="@string/font_regular"
+                        app:ms_background_color="@color/colorAccent"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="350dp" />
 
-                <com.example.steve.hapi.Utilities.MaterialSpinner.materialspinner.MaterialSpinner
-                    android:id="@+id/spinner_sort"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:ms_background_color="@color/colorAccent"
-                    app:ms_dropdown_height="wrap_content"
-                    app:ms_dropdown_max_height="350dp" />
+                    <com.papadatos.steve.hapi.Utilities.MaterialSpinner.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_ranges"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        app:customFont="@string/font_regular"
+                        android:background="@drawable/small_button"
+                        app:ms_background_color="@color/colorAccent"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="350dp" />
 
-            </LinearLayout>
+                    <com.papadatos.steve.hapi.Utilities.MaterialSpinner.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner_sort"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        app:customFont="@string/font_regular"
+                        app:ms_background_color="@color/colorPrimary"
+                        app:ms_dropdown_height="wrap_content"
+                        app:ms_dropdown_max_height="350dp"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/controller"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:divider="@color/colorAccent"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="com.papadatos.steve.hapi.EmotionLog.EmotionLogFragment"
+                tools:showIn="@layout/fragment_emotion_log">
+
+            </ListView>
+
+            <com.papadatos.steve.hapi.Utilities.boommenu.BoomMenuButton
+                android:id="@+id/bmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                app:bmb_buttonEnum="simpleCircle"
+                app:bmb_buttonPlaceEnum="buttonPlace_sc_6_2"
+                app:bmb_hideDelay="0"
+                app:bmb_hideMoveEaseEnum="inOutQuad"
+                app:bmb_hideRotateEaseEnum="inOutQuad"
+                app:bmb_hideScaleEaseEnum="inOutQuad"
+                app:bmb_highlightedColor="@color/colorPrimary"
+                app:bmb_normalColor="@color/colorPrimaryDark"
+                app:bmb_piecePlaceEnum="piecePlace_dot_6_2"
+                app:bmb_showDelay="0"
+                app:bmb_showMoveEaseEnum="inOutQuad"
+                app:bmb_showRotateEaseEnum="inOutQuad"
+                app:bmb_showScaleEaseEnum="inOutQuad" />
 
         </RelativeLayout>
 
-        <ListView
-            android:id="@+id/listview"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_below="@id/controller"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_alignParentEnd="true"
-            android:divider="@color/colorAccent"
-            android:scrollbars="none"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:context="com.example.steve.hapi.EmotionLog.EmotionLogFragment"
-            tools:showIn="@layout/fragment_emotion_log" />
-
-        <com.example.steve.hapi.Utilities.boommenu.BoomMenuButton
-            android:id="@+id/bmb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            app:bmb_buttonEnum="simpleCircle"
-            app:bmb_buttonPlaceEnum="buttonPlace_sc_6_2"
-            app:bmb_hideDelay="0"
-            app:bmb_hideMoveEaseEnum="inOutQuad"
-            app:bmb_hideRotateEaseEnum="inOutQuad"
-            app:bmb_hideScaleEaseEnum="inOutQuad"
-            app:bmb_highlightedColor="@color/colorPrimary"
-            app:bmb_inFragment="true"
-            app:bmb_normalColor="@color/colorPrimaryDark"
-            app:bmb_piecePlaceEnum="piecePlace_dot_6_2"
-            app:bmb_showDelay="0"
-            app:bmb_showMoveEaseEnum="inOutQuad"
-            app:bmb_showRotateEaseEnum="inOutQuad"
-            app:bmb_showScaleEaseEnum="inOutQuad" />
-
     </RelativeLayout>
 
-</RelativeLayout>
+</FrameLayout>
+
+
+

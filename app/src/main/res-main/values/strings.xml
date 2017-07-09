@@ -5,9 +5,9 @@
 
     <string name="status_fragment_textview_reminders">Reminders</string>
 
-    <string name="status_fragment_button_start">START</string>
-    <string name="status_fragment_button_end">END</string>
-    <string name="status_fragment_spinner_amount">AMOUNT</string>
+    <string name="status_fragment_button_start">start</string>
+    <string name="status_fragment_button_end">end</string>
+    <string name="status_fragment_spinner_amount">amount</string>
 
     <string name="choose_emotion_fragment_textview_howudoin">how you doin\'?</string>
 
@@ -25,20 +25,20 @@
     </string-array>
 
     <string-array name="emotions">
-        <item>All</item>
-        <item>Happy</item>
-        <item>Sad</item>
-        <item>Excited</item>
-        <item>Scared</item>
-        <item>Angry</item>
-        <item>Chillin</item>
+        <item>all</item>
+        <item>happy</item>
+        <item>sad</item>
+        <item>excited</item>
+        <item>scared</item>
+        <item>angry</item>
+        <item>chillin</item>
     </string-array>
 
     <string-array name="ranges">
-        <item>All</item>
-        <item>Week</item>
-        <item>Month</item>
-        <item>Year</item>
+        <item>all</item>
+        <item>week</item>
+        <item>month</item>
+        <item>year</item>
     </string-array>
 
     <string-array name="sort">

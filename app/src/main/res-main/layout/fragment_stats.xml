@@ -1,112 +1,125 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context="com.example.steve.hapi.StatsAndSettings.StatsFragment">
+    tools:context="com.papadatos.steve.hapi.StatsAndSettings.StatsFragment"
+    android:background="@color/colorPrimary"
+    android:clickable="true">
 
-    <com.example.steve.hapi.Utilities.CustomTypefaceTextView
+    <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/emotion_log_height"
-        android:text="stats &amp; reminders"
-        android:textSize="40sp"
+        android:layout_margin="12dp"
         android:gravity="center"
-        app:customFont="@string/font_bold"
-        android:layout_margin="12dp"/>
+        android:text="set reminders"
+        android:textSize="40sp"
+        app:customFont="@string/font_bold" />
 
     <LinearLayout
-        android:layout_below="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/emotion_log_shape">
+        android:layout_above="@id/button_confirm"
+        android:layout_below="@+id/title"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/reminder_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <Button
+            <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
                 android:id="@+id/button_start"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="@string/status_fragment_button_start"
-                android:background="@drawable/timer_left_button_shape"/>
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/small_button"
+                app:customFont="@string/font_bold"
+                android:text="@string/status_fragment_button_start" />
 
-            <FrameLayout
-                android:layout_width="1dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
+            <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
+                android:id="@+id/textview_start"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"/>
-
-            <Button
-                android:id="@+id/button_end"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="@string/status_fragment_button_end"
-                android:background="@color/colorAccent"/>
-
-            <FrameLayout
-                android:layout_width="1dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="4dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"/>
-
-            <Button
-                android:id="@+id/button_amounts"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="0"
-                android:background="@drawable/timer_right_button_shape"/>
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textSize="24sp"
+                app:customFont="@string/font_regular" />
 
         </LinearLayout>
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:background="@color/colorPrimary"/>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/spinner_emotions"
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_margin="@dimen/status_fragment_basic_all_margin"/>
+            <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
+                android:id="@+id/button_end"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/small_button"
+                app:customFont="@string/font_bold"
+                android:text="@string/status_fragment_button_end" />
 
-            <Spinner
-                android:id="@+id/spinner_ranges"
-                android:layout_height="wrap_content"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                app:layout_widthPercent="50%"
-                android:layout_margin="@dimen/status_fragment_basic_all_margin"/>
+            <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
+                android:id="@+id/textview_end"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textSize="24sp"
+                app:customFont="@string/font_regular" />
 
         </LinearLayout>
 
 
-        <ListView
-            android:id="@+id/list_view"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        </ListView>
+            <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
+                android:id="@+id/button_amounts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                app:customFont="@string/font_bold"
+
+                android:text="@string/status_fragment_spinner_amount" />
+
+            <SeekBar
+                android:id="@+id/seekbar_amount"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:inputType="number"
+                android:max="4" />
+
+        </LinearLayout>
+
     </LinearLayout>
+
+    <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
+        android:id="@+id/button_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/emotion_log_shape"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="confirm"
+        android:textSize="40sp"
+        app:customFont="@string/font_bold" />
 
 
 </RelativeLayout>

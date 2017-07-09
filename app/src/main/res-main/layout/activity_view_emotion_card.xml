@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.steve.hapi.ChooseEmotion.EmotionCardActivity"
+    tools:context="com.papadatos.steve.hapi.ChooseEmotion.EmotionCardActivity"
     android:background="@color/colorPrimary">
 
     <fragment
@@ -37,13 +37,16 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
-    <Button
+    <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
         android:id="@+id/button_confirm"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
         android:layout_margin="16dp"
-        android:text="OK"
-        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text="ok"
+        android:clickable="true"
+        android:background="@drawable/small_button"
+        app:customFont="@string/font_bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />

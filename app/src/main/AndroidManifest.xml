@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.steve.hapi">
+    package="com.papadatos.steve.hapi">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -19,17 +19,21 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
-        <activity android:name=".MainActivity">
+        <activity android:name="com.papadatos.steve.hapi.EmotionLog.EmotionLogFragment"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChooseEmotion.EmotionCardActivity" />
-        <activity android:name=".EmotionLog.ViewEmotionCardActivity"></activity>
-        <receiver android:name=".Utilities.NotificationPublisher" />
+        <activity
+            android:name="com.papadatos.steve.hapi.ChooseEmotion.EmotionCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.papadatos.steve.hapi.EmotionLog.ViewEmotionCardActivity"
+            android:screenOrientation="portrait"></activity>
+        <receiver
+            android:name="com.papadatos.steve.hapi.Utilities.NotificationPublisher" />
     </application>
 
 </manifest>

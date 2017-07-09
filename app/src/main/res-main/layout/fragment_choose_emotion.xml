@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.example.steve.hapi.Utilities.CustomTypefaceTextView
+    <com.papadatos.steve.hapi.Utilities.CustomTypefaceTextView
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/emotion_log_height"
